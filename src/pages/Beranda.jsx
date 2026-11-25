@@ -30,20 +30,22 @@ const featuredProjects = [
   .map(findProject)
   .filter(Boolean);
 
-const trustClientNames = [
-  "PT PLN (Persero)",
-  "PT Jasa Marga (Persero) Tbk",
-  "PT Hutama Karya (Persero)",
-  "PT Waskita Karya (Persero) Tbk",
-  "PT Total Bangun Persada Tbk",
-  "Radjak Hospital Group",
-  "Kementerian PUPR — Pulomas",
-  "Bandara Kertajati — PT BIJB",
-];
-
-const trustClients = trustClientNames
-  .map((name) => clients.find((client) => client.name === name))
-  .filter(Boolean);
+const LogoSet = ({ hidden }) => (
+  <ul className="logo-marquee__set" aria-hidden={hidden ? "true" : undefined}>
+    {clients.map((client) => (
+      <li key={client.name}>
+        <img
+          src={client.logo.src}
+          alt={client.logo.alt}
+          width={client.logo.width}
+          height={client.logo.height}
+          className={client.logo.className}
+          decoding="async"
+        />
+      </li>
+    ))}
+  </ul>
+);
 
 const legalChips = [
   { label: "Akta pendirian", value: "No. 19 · 29 Juli 2022" },
@@ -416,21 +418,15 @@ export default function Beranda() {
             </p>
           </div>
 
-          <ul className="logo-strip">
-            {trustClients.map((client) => (
-              <li key={client.name}>
-                <img
-                  src={client.logo.src}
-                  alt={client.logo.alt}
-                  width={client.logo.width}
-                  height={client.logo.height}
-                  className={client.logo.className}
-                  loading="lazy"
-                  decoding="async"
-                />
-              </li>
-            ))}
-          </ul>
+          <div className="logo-marquee">
+            <div className="logo-marquee__viewport">
+              <div className="logo-marquee__track">
+                <LogoSet />
+                <LogoSet hidden />
+              </div>
+            </div>
+          </div>
+          <p className="marquee-hint">Geser untuk melihat semua logo</p>
 
           <div className="trust-foot">
             <Link className="link-more" to="/klien">
