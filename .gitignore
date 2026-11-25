@@ -1,3 +1,13 @@
+# Dependensi & hasil build
+node_modules/
+dist/
+.vercel/
+
+# Log
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
 # Dokumen company profile (bukan bagian dari website)
 *.pdf
 *.docx
