@@ -9,7 +9,7 @@ export const projects = [
   {
     cat: "khusus",
     catLabel: "Konstruksi Khusus",
-    image: "/assets/projects/pembongkaran-atap.jpg",
+    image: "/assets/projects/pembongkaran-atap.webp",
     alt: "Pembongkaran Atap — PT. Pionirbeton Industri",
     width: 498,
     height: 900,
@@ -22,7 +22,7 @@ export const projects = [
   {
     cat: "khusus",
     catLabel: "Konstruksi Khusus",
-    image: "/assets/projects/pembobokan-dinding-beton.jpg",
+    image: "/assets/projects/pembobokan-dinding-beton.webp",
     alt: "Pembobokan Dinding Beton — PT. Pionirbeton Industri",
     width: 466,
     height: 900,
@@ -35,7 +35,7 @@ export const projects = [
   {
     cat: "khusus",
     catLabel: "Konstruksi Khusus",
-    image: "/assets/projects/pembobokan-lantai-beton.jpg",
+    image: "/assets/projects/pembobokan-lantai-beton.webp",
     alt: "Pembobokan Lantai Beton — PT. Pionirbeton Industri",
     width: 474,
     height: 900,
@@ -48,7 +48,7 @@ export const projects = [
   {
     cat: "infrastruktur",
     catLabel: "Infrastruktur",
-    image: "/assets/projects/pemadatan-basecourse-bandara.jpg",
+    image: "/assets/projects/pemadatan-basecourse-bandara.webp",
     alt: "Pemadatan Lahan Basecourse — Bandara Kertajati",
     width: 900,
     height: 675,
@@ -61,7 +61,7 @@ export const projects = [
   {
     cat: "infrastruktur",
     catLabel: "Infrastruktur",
-    image: "/assets/projects/pengaspalan-keroncong.jpg",
+    image: "/assets/projects/pengaspalan-keroncong.webp",
     alt: "Pengaspalan Kawasan Industri — PT. Puri Kencana Jaya Abadi",
     width: 900,
     height: 632,
@@ -79,7 +79,7 @@ export const projects = [
   {
     cat: "infrastruktur",
     catLabel: "Infrastruktur",
-    image: "/assets/projects/pemadatan-makadam-keroncong.jpg",
+    image: "/assets/projects/pemadatan-makadam-keroncong.webp",
     alt: "Pemadatan Basecourse & Makadam — PT. Puri Kencana Jaya Abadi",
     width: 900,
     height: 405,
@@ -97,7 +97,7 @@ export const projects = [
   {
     cat: "infrastruktur",
     catLabel: "Infrastruktur",
-    image: "/assets/projects/timbunan-blok-b-ampi.jpg",
+    image: "/assets/projects/timbunan-blok-b-ampi.webp",
     alt: "Timbunan Blok B — PT. AMPI",
     width: 815,
     height: 900,
@@ -110,7 +110,7 @@ export const projects = [
   {
     cat: "infrastruktur",
     catLabel: "Infrastruktur",
-    image: "/assets/projects/timbunan-raya-menceng.jpg",
+    image: "/assets/projects/timbunan-raya-menceng.webp",
     alt: "Timbunan Jl. Raya Menceng — PT. Ravalindo Mega Perkasa",
     width: 900,
     height: 506,
@@ -123,7 +123,7 @@ export const projects = [
   {
     cat: "infrastruktur",
     catLabel: "Infrastruktur",
-    image: "/assets/projects/pematangan-lahan.jpg",
+    image: "/assets/projects/pematangan-lahan.webp",
     alt: "Pematangan Lahan — PT. Ravalindo Mega Perkasa",
     width: 600,
     height: 900,
@@ -136,7 +136,7 @@ export const projects = [
   {
     cat: "infrastruktur",
     catLabel: "Infrastruktur",
-    image: "/assets/projects/pemadatan-basecourse.jpg",
+    image: "/assets/projects/pemadatan-basecourse.webp",
     alt: "Pemadatan Basecourse — PT. Ravalindo Mega Perkasa",
     width: 900,
     height: 506,
@@ -149,7 +149,7 @@ export const projects = [
   {
     cat: "khusus",
     catLabel: "Konstruksi Khusus",
-    image: "/assets/projects/bobokan-tol-jor.jpg",
+    image: "/assets/projects/bobokan-tol-jor.webp",
     alt: "Bobokan Jalan Tol JOR — PT Jasa Marga (Persero) Tbk",
     width: 900,
     height: 675,
@@ -167,7 +167,7 @@ export const projects = [
   {
     cat: "khusus",
     catLabel: "Konstruksi Khusus",
-    image: "/assets/projects/bobokan-tol-jagorawi.jpg",
+    image: "/assets/projects/bobokan-tol-jagorawi.webp",
     alt: "Bobokan Jalan Tol Jagorawi — PT Jasa Marga (Persero) Tbk",
     width: 900,
     height: 506,
@@ -185,7 +185,7 @@ export const projects = [
   {
     cat: "khusus",
     catLabel: "Konstruksi Khusus",
-    image: "/assets/projects/galian-basement-kuningan.jpg",
+    image: "/assets/projects/galian-basement-kuningan.webp",
     alt: "Galian Basement Kuningan — Proyek Konstruksi",
     width: 900,
     height: 675,
@@ -198,7 +198,7 @@ export const projects = [
   {
     cat: "infrastruktur",
     catLabel: "Infrastruktur",
-    image: "/assets/projects/penggalian-saluran-kabel.jpg",
+    image: "/assets/projects/penggalian-saluran-kabel.webp",
     alt: "Penggalian Saluran Kabel — PT. PLN GIS Pulogadung",
     width: 501,
     height: 900,
@@ -211,7 +211,7 @@ export const projects = [
   {
     cat: "kesehatan",
     catLabel: "Kesehatan & Finishing",
-    image: "/assets/projects/ipal-gwt.jpg",
+    image: "/assets/projects/ipal-gwt.webp",
     alt: "IPAL & Ground Water Tank — RS Radjak Group",
     width: 473,
     height: 900,
@@ -224,7 +224,7 @@ export const projects = [
   {
     cat: "kesehatan",
     catLabel: "Kesehatan & Finishing",
-    image: "/assets/projects/saluran-udara.jpg",
+    image: "/assets/projects/saluran-udara.webp",
     alt: "Pemasangan Saluran Udara — RS Radjak Group",
     width: 505,
     height: 900,
@@ -237,7 +237,7 @@ export const projects = [
   {
     cat: "kesehatan",
     catLabel: "Kesehatan & Finishing",
-    image: "/assets/projects/aluminium-foil-genset.jpg",
+    image: "/assets/projects/aluminium-foil-genset.webp",
     alt: "Pemasangan Aluminium Foil Ruang Genset — RS Gunung Jati",
     width: 675,
     height: 900,
@@ -256,7 +256,7 @@ export const projects = [
   {
     cat: "kesehatan",
     catLabel: "Kesehatan & Finishing",
-    image: "/assets/projects/pengecatan-gardu-pln.jpg",
+    image: "/assets/projects/pengecatan-gardu-pln.webp",
     alt: "Pengecatan Gardu PLN — RS Gunung Jati",
     width: 900,
     height: 658,
@@ -275,7 +275,7 @@ export const projects = [
   {
     cat: "kesehatan",
     catLabel: "Kesehatan & Finishing",
-    image: "/assets/projects/pengecatan-dinding-gardu.jpg",
+    image: "/assets/projects/pengecatan-dinding-gardu.webp",
     alt: "Pengecatan Dinding Luar Gardu — RS Gunung Jati",
     width: 900,
     height: 675,
@@ -294,7 +294,7 @@ export const projects = [
   {
     cat: "infrastruktur",
     catLabel: "Infrastruktur",
-    image: "/assets/projects/waskita-japek-elevated.jpg",
+    image: "/assets/projects/waskita-japek-elevated.webp",
     alt: "Bobokan Perkerasan Tol JAPEK II — PT Waskita Karya (Persero) Tbk",
     width: 900,
     height: 1200,
@@ -312,7 +312,7 @@ export const projects = [
   {
     cat: "infrastruktur",
     catLabel: "Infrastruktur",
-    image: "/assets/projects/hutama-timbunan-marunda.jpg",
+    image: "/assets/projects/hutama-timbunan-marunda.webp",
     alt: "Timbunan Lahan Marunda — PT Hutama Karya (Persero)",
     width: 900,
     height: 1200,
@@ -330,7 +330,7 @@ export const projects = [
   {
     cat: "khusus",
     catLabel: "Konstruksi Khusus",
-    image: "/assets/projects/pui-pancoran-struktur.jpg",
+    image: "/assets/projects/pui-pancoran-struktur.webp",
     alt: "Pembangunan Kantor PUI Pancoran — Partai Ummat Islam",
     width: 1200,
     height: 900,
@@ -343,7 +343,7 @@ export const projects = [
   {
     cat: "infrastruktur",
     catLabel: "Infrastruktur",
-    image: "/assets/projects/total-banggun-disposal-puri-indah.jpg",
+    image: "/assets/projects/total-banggun-disposal-puri-indah.webp",
     alt: "Gali Buang Material ke Disposal — PT Total Bangun Persada Tbk",
     width: 900,
     height: 1200,
@@ -361,7 +361,7 @@ export const projects = [
   {
     cat: "infrastruktur",
     catLabel: "Infrastruktur",
-    image: "/assets/projects/pupr-pulomas-galian.jpg",
+    image: "/assets/projects/pupr-pulomas-galian.webp",
     alt: "Galian dan Pengangkutan Material — Kementerian PUPR Pulomas",
     width: 900,
     height: 1200,
@@ -375,7 +375,7 @@ export const projects = [
   {
     cat: "khusus",
     catLabel: "Konstruksi Khusus",
-    image: "/assets/projects/adiparna-gudang-baja.jpg",
+    image: "/assets/projects/adiparna-gudang-baja.webp",
     alt: "Pembangunan Fasilitas Industri — PT Adiprana Sentosa Indovesco",
     width: 900,
     height: 1200,
@@ -393,7 +393,7 @@ export const projects = [
   {
     cat: "infrastruktur",
     catLabel: "Infrastruktur",
-    image: "/assets/projects/unisia-cut-fill-antasari.jpg",
+    image: "/assets/projects/unisia-cut-fill-antasari.webp",
     alt: "Cut and Fill Jalan Pangeran Antasari — PT Unisia Medika Jaya",
     width: 1200,
     height: 900,
