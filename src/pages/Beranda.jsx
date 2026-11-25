@@ -108,46 +108,6 @@ const serviceSummary = [
   },
 ];
 
-const pageLinks = [
-  {
-    to: "/tentang",
-    num: "01",
-    title: "Tentang Kami",
-    description: "Profil perseroan, nilai kerja, data perusahaan, dan struktur organisasi.",
-  },
-  {
-    to: "/layanan",
-    num: "02",
-    title: "Layanan",
-    description:
-      "Enam bidang usaha: gedung, konstruksi khusus, angkutan, sewa alat, pekerjaan tanah, dan perkerasan.",
-  },
-  {
-    to: "/proyek",
-    num: "03",
-    title: "Proyek",
-    description: "Portofolio pekerjaan yang terdokumentasi, dapat difilter menurut kategori.",
-  },
-  {
-    to: "/klien",
-    num: "04",
-    title: "Klien & Mitra",
-    description: "Perusahaan dan instansi yang mempercayakan pekerjaannya kepada kami.",
-  },
-  {
-    to: "/legalitas",
-    num: "05",
-    title: "Legalitas",
-    description: "Akta, perizinan, komposisi modal, dan laporan tahunan perseroan.",
-  },
-  {
-    to: "/kontak",
-    num: "06",
-    title: "Kontak",
-    description: "Alamat kantor, telepon/WhatsApp, email, dan formulir kebutuhan proyek.",
-  },
-];
-
 const ArrowIcon = () => (
   <svg
     viewBox="0 0 24 24"
@@ -520,35 +480,6 @@ export default function Beranda() {
               Lihat keenam bidang usaha
               <ArrowIcon />
             </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="section" id="halaman">
-        <div className="container">
-          <div className="section-head">
-            <div>
-              <p className="eyebrow">Jelajahi</p>
-              <h2>Setiap topik punya halamannya sendiri.</h2>
-            </div>
-            <p>
-              Profil, layanan, portofolio, klien, legalitas, dan kontak tersedia pada halaman
-              terpisah sehingga lebih mudah dibuka dan dibagikan.
-            </p>
-          </div>
-
-          <div className="paths-grid">
-            {pageLinks.map((page) => (
-              <Link className="path-card" key={page.to} to={page.to}>
-                <span className="path-num">{page.num}</span>
-                <h3>{page.title}</h3>
-                <p>{page.description}</p>
-                <span className="path-more">
-                  Buka halaman
-                  <ArrowIcon />
-                </span>
-              </Link>
-            ))}
           </div>
         </div>
       </section>
