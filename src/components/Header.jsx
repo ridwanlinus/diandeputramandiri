@@ -6,7 +6,6 @@ const links = [
   { to: "/layanan", label: "Layanan" },
   { to: "/proyek", label: "Proyek" },
   { to: "/klien", label: "Klien" },
-  { to: "/legalitas", label: "Legalitas" },
   { to: "/kontak", label: "Kontak" },
 ];
 

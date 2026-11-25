@@ -438,15 +438,15 @@ export default function Beranda() {
           <div className="legal-strip">
             <div className="legal-strip-head">
               <h3>Legalitas perseroan</h3>
-              <Link className="link-more" to="/legalitas">
-                Buka halaman legalitas
+              <Link className="link-more" to="/tentang#legalitas">
+                Buka legalitas di Tentang
                 <ArrowIcon />
               </Link>
             </div>
             <ul className="legal-chips">
               {legalChips.map((chip) => (
                 <li key={chip.label}>
-                  <Link className="legal-chip" to="/legalitas">
+                  <Link className="legal-chip" to="/tentang#legalitas">
                     <span className="lc-ico">
                       <svg
                         viewBox="0 0 24 24"

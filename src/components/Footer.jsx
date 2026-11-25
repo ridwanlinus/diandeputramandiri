@@ -44,7 +44,7 @@ export default function Footer() {
                 <Link to="/tentang#struktur">Struktur Organisasi</Link>
               </li>
               <li>
-                <Link to="/legalitas">Legalitas</Link>
+                <Link to="/tentang#legalitas">Legalitas</Link>
               </li>
               <li>
                 <Link to="/kontak">Kontak</Link>

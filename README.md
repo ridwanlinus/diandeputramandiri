@@ -17,12 +17,13 @@ Setiap menu punya rute dan komponen halamannya sendiri:
 | Rute | Halaman |
 | --- | --- |
 | `/` | Beranda |
-| `/tentang` | Tentang Kami (termasuk `#struktur`) |
+| `/tentang` | Tentang Kami (termasuk `#legalitas` dan `#struktur`) |
 | `/layanan` | Layanan |
 | `/proyek` | Portofolio (filter kategori) |
 | `/klien` | Klien & Mitra |
-| `/legalitas` | Legalitas |
 | `/kontak` | Kontak + form WhatsApp |
+
+Rute lama `/legalitas` dialihkan ke `/tentang#legalitas`.
 
 ## Struktur
 

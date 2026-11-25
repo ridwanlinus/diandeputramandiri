@@ -5,7 +5,6 @@ import Tentang from "./pages/Tentang.jsx";
 import Layanan from "./pages/Layanan.jsx";
 import Proyek from "./pages/Proyek.jsx";
 import Klien from "./pages/Klien.jsx";
-import Legalitas from "./pages/Legalitas.jsx";
 import Kontak from "./pages/Kontak.jsx";
 
 export default function App() {
@@ -17,7 +16,7 @@ export default function App() {
         <Route path="layanan" element={<Layanan />} />
         <Route path="proyek" element={<Proyek />} />
         <Route path="klien" element={<Klien />} />
-        <Route path="legalitas" element={<Legalitas />} />
+        <Route path="legalitas" element={<Navigate to="/tentang#legalitas" replace />} />
         <Route path="kontak" element={<Kontak />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
