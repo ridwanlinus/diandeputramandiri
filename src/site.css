@@ -30,7 +30,6 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
-body.nav-open { overflow: hidden; }
 img, svg { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
 ul { margin: 0; padding: 0; list-style: none; }
@@ -184,29 +183,6 @@ p { margin: 0 0 1rem; }
 .nav a.nav-link:hover { color: var(--ink); }
 .nav a.nav-link:hover::after { transform: scaleX(1); }
 .nav .btn { margin-left: 6px; }
-
-.nav-toggle {
-  display: none;
-  width: 44px;
-  height: 44px;
-  border: 1px solid var(--line);
-  background: transparent;
-  border-radius: 10px;
-  cursor: pointer;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 5px;
-}
-.nav-toggle span {
-  width: 20px;
-  height: 2px;
-  background: var(--ink);
-  transition: transform .25s ease, opacity .2s ease;
-}
-.nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
-.nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* ---------- Hero ---------- */
 .hero { position: relative; padding: clamp(40px, 6vw, 72px) 0 clamp(56px, 7vw, 88px); }
@@ -854,28 +830,16 @@ p { margin: 0 0 1rem; }
 }
 
 @media (max-width: 860px) {
-  :root { --header-h: 70px; }
-  .nav {
-    position: fixed;
-    inset: var(--header-h) 0 auto 0;
-    z-index: 99;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-    padding: 12px 24px 24px;
-    background: var(--paper);
-    border-bottom: 1px solid var(--line);
-    box-shadow: 0 30px 50px -30px rgba(11, 27, 43, .4);
-    transform: translateY(-12px);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity .22s ease, transform .22s ease, visibility .22s;
+  :root { --header-h: 108px; }
+  .nav-wrap {
+    height: auto;
+    flex-wrap: wrap;
+    gap: 6px 16px;
+    padding-block: 10px;
   }
-  .nav.is-open { opacity: 1; transform: none; visibility: visible; }
-  .nav a.nav-link { padding: 13px 2px; border-bottom: 1px solid var(--line); font-size: .95rem; }
-  .nav a.nav-link::after { display: none; }
-  .nav .btn { margin: 18px 0 0; }
-  .nav-toggle { display: inline-flex; }
+  .nav { width: 100%; gap: 18px; }
+  .nav a.nav-link { font-size: .84rem; }
+  .nav .btn { margin-left: auto; padding: 8px 14px; font-size: .76rem; }
 
   .hero-grid { grid-template-columns: 1fr; }
   .hero-copy { max-width: 640px; }
