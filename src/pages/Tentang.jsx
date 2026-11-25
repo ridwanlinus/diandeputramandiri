@@ -1,5 +1,6 @@
 import Reveal from "../components/Reveal.jsx";
 import usePageMeta from "../hooks/usePageMeta.js";
+import { services } from "../data/services.jsx";
 
 const values = [
   {
@@ -155,8 +156,8 @@ const timeline = [
 
 export default function Tentang() {
   usePageMeta(
-    "Tentang & Legalitas — PT. Diande Putra Mandiri",
-    "Profil PT. Diande Putra Mandiri: nilai kerja, data perseroan, legalitas dan tata kelola, serta struktur organisasi perusahaan konstruksi di Jakarta Timur."
+    "Tentang, Layanan & Legalitas — PT. Diande Putra Mandiri",
+    "Profil PT. Diande Putra Mandiri: enam bidang usaha, nilai kerja, data perseroan, legalitas dan tata kelola, serta struktur organisasi perusahaan konstruksi di Jakarta Timur."
   );
 
   return (
@@ -235,6 +236,51 @@ export default function Tentang() {
                 ))}
               </dl>
             </Reveal>
+          </div>
+        </div>
+      </section>
+
+      <section className="section services" id="layanan">
+        <div className="container">
+          <div className="section-head">
+            <div>
+              <p className="eyebrow">Layanan &amp; Bidang Usaha</p>
+              <h2>Enam bidang usaha, satu titik koordinasi.</h2>
+            </div>
+            <p>
+              Dari struktur bangunan hingga pekerjaan tanah dan mobilisasi material, pekerjaan
+              ditangani secara terpadu oleh tim internal dan tenaga ahli berpengalaman.
+            </p>
+          </div>
+
+          <div className="service-grid">
+            {services.map((service) => (
+              <Reveal as="article" className="service" key={service.num}>
+                <div className="service-top">
+                  <span className="service-icon">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.6"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden="true"
+                    >
+                      {service.icon}
+                    </svg>
+                  </span>
+                  <span className="service-num">{service.num}</span>
+                </div>
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
+                <ul className="service-list">
+                  {service.items.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>

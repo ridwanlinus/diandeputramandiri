@@ -32,22 +32,19 @@ export default function Footer() {
                 <Link to="/tentang">Tentang Kami</Link>
               </li>
               <li>
-                <Link to="/layanan">Layanan</Link>
+                <Link to="/tentang#layanan">Layanan</Link>
               </li>
               <li>
                 <Link to="/proyek">Proyek</Link>
               </li>
               <li>
-                <Link to="/klien">Klien &amp; Mitra</Link>
+                <Link to="/proyek#klien">Klien &amp; Mitra</Link>
               </li>
               <li>
                 <Link to="/tentang#struktur">Struktur Organisasi</Link>
               </li>
               <li>
                 <Link to="/tentang#legalitas">Legalitas</Link>
-              </li>
-              <li>
-                <Link to="/kontak">Kontak</Link>
               </li>
             </ul>
           </div>

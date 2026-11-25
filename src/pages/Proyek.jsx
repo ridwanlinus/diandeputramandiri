@@ -1,13 +1,14 @@
 import { useMemo, useState } from "react";
 import usePageMeta from "../hooks/usePageMeta.js";
 import { projectFilters, projects } from "../data/projects.js";
+import { clients } from "../data/clients.js";
 
 export default function Proyek() {
   const [activeFilter, setActiveFilter] = useState("all");
 
   usePageMeta(
-    "Portofolio Proyek — PT. Diande Putra Mandiri",
-    "Portofolio pekerjaan PT. Diande Putra Mandiri pada sektor industri, infrastruktur jalan, fasilitas kesehatan, dan ketenagalistrikan."
+    "Proyek & Klien — PT. Diande Putra Mandiri",
+    "Portofolio pekerjaan dan klien PT. Diande Putra Mandiri pada sektor industri, infrastruktur jalan, fasilitas kesehatan, dan ketenagalistrikan."
   );
 
   const visibleProjects = useMemo(() => {
@@ -19,17 +20,66 @@ export default function Proyek() {
     <>
       <section className="page-head">
         <div className="container">
-          <p className="eyebrow">Portofolio</p>
-          <h1>Pekerjaan yang telah kami tuntaskan.</h1>
+          <p className="eyebrow">Proyek &amp; Klien</p>
+          <h1>Rekam jejak pekerjaan dan mitra kami.</h1>
           <p className="lead">
-            Rekam jejak pekerjaan pada sektor industri, infrastruktur jalan, fasilitas kesehatan,
-            dan ketenagalistrikan sesuai dokumentasi company profile.
+            Portofolio pekerjaan pada sektor industri, infrastruktur jalan, fasilitas kesehatan, dan
+            ketenagalistrikan, bersama perusahaan dan instansi yang mempercayakan pekerjaannya
+            kepada kami.
+          </p>
+        </div>
+      </section>
+
+      <section className="section clients" id="klien">
+        <div className="container">
+          <div className="section-head">
+            <div>
+              <p className="eyebrow">Klien &amp; Mitra</p>
+              <h2>Dipercaya BUMN, instansi, dan sektor swasta.</h2>
+            </div>
+            <p>
+              Enam belas perusahaan dan instansi tercatat dalam dokumentasi pekerjaan kami — dari
+              ketenagalistrikan dan jalan tol hingga fasilitas kesehatan dan instansi pemerintah.
+            </p>
+          </div>
+
+          <ul className="client-grid">
+            {clients.map((client) => (
+              <li className="client-card" key={client.name}>
+                <span className="client-logo">
+                  <img
+                    src={client.logo.src}
+                    alt={client.logo.alt}
+                    width={client.logo.width}
+                    height={client.logo.height}
+                    className={client.logo.className}
+                    loading="lazy"
+                  />
+                </span>
+                <span className="client-name">{client.name}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="client-note">
+            Logo klien ditampilkan sebagai identitas; hak atas merek tetap milik masing-masing
+            pemilik.
           </p>
         </div>
       </section>
 
       <section className="section projects" id="proyek">
         <div className="container">
+          <div className="section-head">
+            <div>
+              <p className="eyebrow">Portofolio</p>
+              <h2>Pekerjaan yang telah kami tuntaskan.</h2>
+            </div>
+            <p>
+              Daftar pekerjaan yang terdokumentasi dalam company profile, dipisahkan menurut jenis
+              kegiatan pada setiap klien.
+            </p>
+          </div>
+
           <div className="filters" role="group" aria-label="Filter kategori proyek">
             {projectFilters.map((filter) => {
               const isActive = filter.value === activeFilter;

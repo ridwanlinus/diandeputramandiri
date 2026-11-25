@@ -12,18 +12,18 @@ npm run preview  # cek hasil build secara lokal
 
 ## Halaman
 
-Setiap menu punya rute dan komponen halamannya sendiri:
-
 | Rute | Halaman |
 | --- | --- |
-| `/` | Beranda |
-| `/tentang` | Tentang Kami (termasuk `#legalitas` dan `#struktur`) |
-| `/layanan` | Layanan |
-| `/proyek` | Portofolio (filter kategori) |
-| `/klien` | Klien & Mitra |
-| `/kontak` | Kontak + form WhatsApp |
+| `/` | Beranda (ringkasan layanan, proyek unggulan, klien, dan penawaran) |
+| `/tentang` | Profil, layanan (`#layanan`), legalitas (`#legalitas`), struktur organisasi (`#struktur`) |
+| `/proyek` | Klien & mitra (`#klien`) dan portofolio dengan filter kategori |
 
-Rute lama `/legalitas` dialihkan ke `/tentang#legalitas`.
+Rute lama dialihkan agar tautan yang sudah tersebar tetap berfungsi:
+
+- `/layanan` → `/tentang#layanan`
+- `/klien` → `/proyek#klien`
+- `/legalitas` → `/tentang#legalitas`
+- `/kontak` → `/#penawaran`
 
 ## Struktur
 
@@ -33,7 +33,7 @@ src/main.jsx          # bootstrap React + BrowserRouter
 src/App.jsx           # definisi rute
 src/pages/            # satu file per halaman
 src/components/       # Header, Footer, Layout, Reveal
-src/data/             # data proyek & klien
+src/data/             # data layanan, proyek & klien
 src/hooks/            # usePageMeta (judul & meta per halaman)
 src/site.css          # stylesheet situs
 public/assets/        # gambar, logo, bagan organisasi

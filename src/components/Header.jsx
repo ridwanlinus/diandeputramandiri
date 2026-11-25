@@ -3,11 +3,12 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 
 const links = [
   { to: "/tentang", label: "Tentang" },
-  { to: "/layanan", label: "Layanan" },
   { to: "/proyek", label: "Proyek" },
-  { to: "/klien", label: "Klien" },
-  { to: "/kontak", label: "Kontak" },
 ];
+
+const WA_HREF = `https://wa.me/6281211166224?text=${encodeURIComponent(
+  "Halo PT. Diande Putra Mandiri, saya ingin berkonsultasi mengenai rencana pekerjaan konstruksi."
+)}`;
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -82,9 +83,15 @@ export default function Header() {
               {link.label}
             </NavLink>
           ))}
-          <Link className="btn btn--dark btn--sm" to="/kontak" onClick={() => setOpen(false)}>
+          <a
+            className="btn btn--dark btn--sm"
+            href={WA_HREF}
+            target="_blank"
+            rel="noopener"
+            onClick={() => setOpen(false)}
+          >
             Hubungi Kami
-          </Link>
+          </a>
         </nav>
       </div>
     </header>

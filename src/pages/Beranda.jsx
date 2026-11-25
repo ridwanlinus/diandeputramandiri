@@ -3,10 +3,17 @@ import Reveal from "../components/Reveal.jsx";
 import usePageMeta from "../hooks/usePageMeta.js";
 import { projects } from "../data/projects.js";
 import { clients } from "../data/clients.js";
+import { services } from "../data/services.jsx";
 
 const WA_NUMBER = "6281211166224";
 const WA_HREF = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(
   "Halo PT. Diande Putra Mandiri, saya ingin berkonsultasi mengenai rencana pekerjaan konstruksi."
+)}`;
+
+const QUOTE_MAIL_HREF = `mailto:diandeputramandiri.com@gmail.com?subject=${encodeURIComponent(
+  "Permintaan penawaran pekerjaan"
+)}&body=${encodeURIComponent(
+  "Halo PT. Diande Putra Mandiri,\n\nKami ingin meminta penawaran untuk pekerjaan berikut.\n\nLokasi:\nLingkup pekerjaan:\nTarget waktu:\n\nTerima kasih."
 )}`;
 
 const findProject = (title) => projects.find((project) => project.title === title);
@@ -51,61 +58,6 @@ const legalChips = [
   { label: "Akta pendirian", value: "No. 19 · 29 Juli 2022" },
   { label: "Pengesahan Kemenkumham", value: "AHU-0051229.AH.01.01.TAHUN 2022" },
   { label: "NIB", value: "0108220067519 · PMDN" },
-];
-
-const serviceSummary = [
-  {
-    num: "01",
-    title: "Konstruksi Gedung",
-    description:
-      "Pembangunan, renovasi, dan pemeliharaan gedung hunian, kantor, industri, hingga fasilitas kesehatan.",
-    icon: (
-      <>
-        <path d="M3 21h18M5 21V8l7-5 7 5v13" />
-        <path d="M9 21v-6h6v6M9 11h.01M15 11h.01" />
-      </>
-    ),
-  },
-  {
-    num: "02",
-    title: "Konstruksi Khusus",
-    description:
-      "Pembobokan, perkuatan struktur, dan pekerjaan pendukung yang menuntut metode serta peralatan spesifik.",
-    icon: (
-      <>
-        <path d="M2 20h20M4 20v-5h6v5M10 20V9h5v11" />
-        <path d="m14 9 5-4 2 3-4 5" />
-        <path d="M4 15V11h6v4" />
-        <path d="M7 11V7h4" />
-      </>
-    ),
-  },
-  {
-    num: "03",
-    title: "Pekerjaan Tanah",
-    description:
-      "Galian, timbunan, cut and fill, bongkaran, dan penyiapan lahan sampai siap dikerjakan.",
-    icon: (
-      <>
-        <path d="M2 20h20" />
-        <path d="M2 20 8 11l4 4 3-6 7 11" />
-        <path d="M8 11 6 6h4l2 5" />
-      </>
-    ),
-  },
-  {
-    num: "04",
-    title: "Perkerasan",
-    description:
-      "Pengaspalan, rigid, lean concrete, dan RCV untuk jalan kawasan, halaman, serta area parkir.",
-    icon: (
-      <>
-        <path d="M2 21h20" />
-        <path d="M6 21 9 8h6l3 13" />
-        <path d="M12 11v2M12 16v2" />
-      </>
-    ),
-  },
 ];
 
 const ArrowIcon = () => (
@@ -174,7 +126,7 @@ export default function Beranda() {
               tol, rumah sakit, dan instansi pemerintah.
             </p>
             <div className="hero-actions">
-              <Link className="btn btn--amber" to="/kontak">
+              <Link className="btn btn--amber" to="/#penawaran">
                 Minta Penawaran
                 <ArrowIcon />
               </Link>
@@ -389,7 +341,7 @@ export default function Beranda() {
           <p className="marquee-hint">Geser untuk melihat semua logo</p>
 
           <div className="trust-foot">
-            <Link className="link-more" to="/klien">
+            <Link className="link-more" to="/proyek#klien">
               Lihat semua klien
               <ArrowIcon />
             </Link>
@@ -446,9 +398,9 @@ export default function Beranda() {
             </p>
           </div>
 
-          <div className="service-grid service-grid--four">
-            {serviceSummary.map((service) => (
-              <Link className="service service--link" to="/layanan" key={service.title}>
+          <div className="service-grid">
+            {services.map((service) => (
+              <article className="service" key={service.num}>
                 <div className="service-top">
                   <span className="service-icon">
                     <svg
@@ -467,17 +419,13 @@ export default function Beranda() {
                 </div>
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
-                <span className="service-more">
-                  Lihat layanan
-                  <ArrowIcon />
-                </span>
-              </Link>
+              </article>
             ))}
           </div>
 
           <div className="service-foot">
-            <Link className="btn btn--dark btn--sm" to="/layanan">
-              Lihat keenam bidang usaha
+            <Link className="btn btn--dark btn--sm" to="/tentang#layanan">
+              Rincian layanan di Tentang
               <ArrowIcon />
             </Link>
           </div>
@@ -495,10 +443,10 @@ export default function Beranda() {
                 dengan penawaran sesuai kebutuhan proyek Anda.
               </p>
               <div className="hero-actions">
-                <Link className="btn btn--amber" to="/kontak">
+                <a className="btn btn--amber" href={QUOTE_MAIL_HREF}>
                   Minta Penawaran
                   <ArrowIcon />
-                </Link>
+                </a>
                 <a
                   className="btn btn--light"
                   href={WA_HREF}

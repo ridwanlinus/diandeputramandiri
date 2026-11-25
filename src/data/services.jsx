@@ -1,7 +1,4 @@
-import Reveal from "../components/Reveal.jsx";
-import usePageMeta from "../hooks/usePageMeta.js";
-
-const services = [
+export const services = [
   {
     num: "01",
     title: "Konstruksi Gedung",
@@ -111,59 +108,3 @@ const services = [
     ),
   },
 ];
-
-export default function Layanan() {
-  usePageMeta(
-    "Layanan & Bidang Usaha — PT. Diande Putra Mandiri",
-    "Enam bidang usaha PT. Diande Putra Mandiri: konstruksi gedung, konstruksi khusus, angkutan darat, penyewaan alat, pekerjaan tanah, dan perkerasan."
-  );
-
-  return (
-    <>
-      <section className="page-head">
-        <div className="container">
-          <p className="eyebrow">Layanan</p>
-          <h1>Bidang usaha dan lingkup pekerjaan.</h1>
-          <p className="lead">
-            Dari struktur bangunan hingga pekerjaan tanah dan mobilisasi material, pekerjaan
-            ditangani secara terpadu oleh tim internal dan tenaga ahli berpengalaman.
-          </p>
-        </div>
-      </section>
-
-      <section className="section services" id="layanan">
-        <div className="container">
-          <div className="service-grid">
-            {services.map((service) => (
-              <Reveal as="article" className="service" key={service.num}>
-                <div className="service-top">
-                  <span className="service-icon">
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.6"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      aria-hidden="true"
-                    >
-                      {service.icon}
-                    </svg>
-                  </span>
-                  <span className="service-num">{service.num}</span>
-                </div>
-                <h3>{service.title}</h3>
-                <p>{service.description}</p>
-                <ul className="service-list">
-                  {service.items.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-    </>
-  );
-}
